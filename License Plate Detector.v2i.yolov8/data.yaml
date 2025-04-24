@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['LicensePlate']
+
+roboflow:
+  workspace: cv-xyxrk
+  project: license-plate-detector-ogxxg-4vajy
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/cv-xyxrk/license-plate-detector-ogxxg-4vajy/dataset/2
