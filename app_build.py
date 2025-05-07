@@ -59,8 +59,23 @@ def run_inference(model_path, source_path, apply_ocr=False):
 # Streamlit UI
 st.set_page_config(page_title="License Plate Detection", layout="centered")
 st.title("🚘 License Plate Detection and OCR System")
+st.write("""
+This system is designed to automatically detect license plates from vehicle images and extract the license number using Optical Character Recognition (OCR). It helps in automating surveillance, vehicle identification, and traffic management.
 
-st.markdown("## 🧩 License Plate Detection Only")
+**Advantages**:
+- Eliminates manual data entry errors
+- Enhances law enforcement and parking management
+- Real-time and accurate plate recognition
+
+**🛠️ Tech Stack Used**:
+- [Streamlit](https://streamlit.io/): For creating the interactive web application
+- [YOLOv8](https://github.com/ultralytics/ultralytics): For real-time object detection
+- [EasyOCR](https://github.com/JaidedAI/EasyOCR): For reading text from license plates
+- [OpenCV](https://opencv.org/): For image processing
+- [Python](https://www.python.org/): Core programming language powering the system
+""")
+
+st.markdown("## 💡 License Plate Detection Only")
 image_file_1 = st.file_uploader("📤 Upload Image for Detection Only", type=["jpg", "jpeg", "png"], key="detect_only")
 
 if image_file_1:
